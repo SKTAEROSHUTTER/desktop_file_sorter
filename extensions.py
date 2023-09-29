@@ -42,7 +42,7 @@ extensions = {
         ".amr",
         ".ac3",
     ],
-    "Zip_Files": [".zip", ".tgz", ".rar", ".tar", ".gz",],
+    "Zip_Files": [".zip", ".tgz", ".rar", ".tar", ".gz",".xz"],
     "Document_Files": [
         ".pdf",
         ".doc",
@@ -56,6 +56,9 @@ extensions = {
         ".html",
         ".htm",
         ".twbx",
+        ".XLSX",
+        ".odp",
+        ".xlsm",
     ],
     "Program_Files": [
         ".exe",
@@ -74,6 +77,8 @@ extensions = {
         ".iso",
         ".studio",
         ".js",
+        ".ini",
+        ".ppk",
     ],
     "Design_Files": [".psd", ".ai", ".indd", ".eps", ".xd", ".sketch",],
     "GIS_Files": [
@@ -121,6 +126,8 @@ extensions = {
     ".mif",
     ".mid",
     ".vrt",
+    ".osm",
+    ".sig",
     
     # Web Formats
     ".wms",
@@ -178,6 +185,7 @@ extensions = {
     ".ace",
     ".000",
 ],
+    "Other_Folders":[],
 
     
 }
