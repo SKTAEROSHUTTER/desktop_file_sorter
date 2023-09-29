@@ -1,114 +1,119 @@
 <p align="center">
   <a href="" rel="noopener">
- <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo"></a>
+    <img width=200px height=200px src="https://i.imgur.com/6wj0hh6.jpg" alt="Project logo">
+  </a>
 </p>
 
-<h3 align="center">Project Title</h3>
+<h3 align="center">Python File Sorter</h3>
 
 <div align="center">
 
 [![Status](https://img.shields.io/badge/status-active-success.svg)]()
-[![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/issues)
-[![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/kylelobo/The-Documentation-Compendium/pulls)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](/LICENSE)
 
 </div>
 
 ---
 
-<p align="center"> Few lines describing your project.
+<p align="center"> A Python program to sort files based on their extensions.
     <br> 
 </p>
 
-## 📝 Table of Contents
+<h1> 📝 Table of Contents </h1>
 
 - [About](#about)
 - [Getting Started](#getting_started)
-- [Deployment](#deployment)
 - [Usage](#usage)
+- [Deployment](#deployment)
 - [Built Using](#built_using)
-- [TODO](../TODO.md)
-- [Contributing](../CONTRIBUTING.md)
+- [Contributing](#contributing)
 - [Authors](#authors)
-- [Acknowledgments](#acknowledgement)
 
-## 🧐 About <a name = "about"></a>
+<hr/>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+<h1>🧐  About <a name="about"></a> </h1>
+ 
+Python File Sorter is a simple command-line program that helps you organize your files by sorting them into folders based on their file extensions.
+<hr/>
 
-## 🏁 Getting Started <a name = "getting_started"></a>
+<h1> 🏁 Getting Started <a name="getting_started"></a></h1>
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See [deployment](#deployment) for notes on how to deploy the project on a live system.
+These instructions will guide you on how to set up and run the Python File Sorter on your local machine.
 
-### Prerequisites
+<h1> Prerequisites </h1>
 
-What things you need to install the software and how to install them.
+Make sure you have Poetry installed. You can install it using pip:
 
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running.
-
-Say what the step will be
-
-```
-Give the example
+```bash
+pip install poetry
 ```
 
-And repeat
+<h1> Installing </h1>
+
+
+ 1. Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/file_sorter.git
+cd file_sorter
 
 ```
-until finished
+
+2. Set up the virtual environment and install dependencies using Poetry:
+
+```bash
+poetry install
 ```
+3. Run the Python File Sorter:
 
-End with an example of getting some data out of the system or using it for a little demo.
-
-## 🔧 Running the tests <a name = "tests"></a>
-
-Explain how to run the automated tests for this system.
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+```bash
+poetry run python main.py
 
 ```
-Give an example
-```
+<hr/>
 
-### And coding style tests
+<h1> 🎈 Usage <a name="usage"></a> </h1>
 
-Explain what these tests test and why
+The Python File Sorter sorts files in the current directory into subdirectories based on their file extensions.
 
-```
-Give an example
-```
+<h1> 🚀 Deployment <a name = "deployment"></a></h1>
+You can automate the execution of the Python File Sorter on a regular schedule using the Windows Task Scheduler. Here are the steps to set it up:
 
-## 🎈 Usage <a name="usage"></a>
+1. Open the Windows Task Scheduler by searching for "Task Scheduler" in the Windows Start menu.
 
-Add notes about how to use the system.
+2. In the Task Scheduler window, click on "Create Basic Task" from the right-hand pane.
 
-## 🚀 Deployment <a name = "deployment"></a>
+3. Follow the wizard to give your task a name and description. Click "Next."
 
-Add additional notes about how to deploy this on a live system.
+4. Choose the frequency at which you want to run the Python File Sorter (e.g., daily, weekly, or monthly). Click "Next."
 
-## ⛏️ Built Using <a name = "built_using"></a>
+5. Specify the start date and time for the task. Click "Next."
 
-- [MongoDB](https://www.mongodb.com/) - Database
-- [Express](https://expressjs.com/) - Server Framework
-- [VueJs](https://vuejs.org/) - Web Framework
-- [NodeJs](https://nodejs.org/en/) - Server Environment
+6. Select "Start a Program" as the action to perform. Click "Next."
 
-## ✍️ Authors <a name = "authors"></a>
+7. Browse and select the `main.py` file from your Python File Sorter project directory as the program/script to run.
 
-- [@kylelobo](https://github.com/kylelobo) - Idea & Initial work
+8. In the "Add arguments" field, you can specify any command-line arguments your program needs. For example, if you want to sort files in a specific directory, you can use something like:
+   ```bash
+   -d C:\Path\To\Your\Directory
+    ```
+   
+9. In the "Start in" field, specify the path to your Python File Sorter project directory.
 
-See also the list of [contributors](https://github.com/kylelobo/The-Documentation-Compendium/contributors) who participated in this project.
+10. Review your task settings and click "Finish" to create the task.
 
-## 🎉 Acknowledgements <a name = "acknowledgement"></a>
+11. To run the task immediately, right-click on it in the Task Scheduler and select "Run."
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- References
+Your Python File Sorter will now run automatically according to the schedule you defined.
+
+
+<h1> ⛏️ Built Using <a name = "built_using"></a></h1>
+
+- [Python](https://www.python.com/) - Programming Language
+- [Poetry](https://python-poetry.org/) - Dependency Manage
+
+<h1>  ✍️ Authors <a name = "authors"></a></h1>
+
+- [@sadatyussuf](https://github.com/sadatyussuf) - Idea & Initial work
+
+
