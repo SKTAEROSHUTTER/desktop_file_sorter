@@ -1,15 +1,18 @@
 import pathlib as path
 
-import extensions
+# import extensions
+from extensions import extensions
 from rich import print
 import sys
 
+
 downloads_path = path.Path.home() / "Downloads"
-extensions = extensions.extensions
+# extensions = extensions.extensions
 
 # # This line uses a list comprehension to iterate over all items in the "downloads_path" directory
 # and filter out any that are not files, creating a list of all files in the directory.
 files = [i for i in downloads_path.iterdir() if i.is_file()]
+other_folders = [i for i in downloads_path.iterdir() if i.is_dir()]
 
 
 def create_folders(extensions: dict):
@@ -49,11 +52,25 @@ def sort_files(files: list, extensions: dict):
                 file.rename(destination_folder / file.name)
                 # file = destination_folder / file.name
 
+def sort_folders(other_folders:list, extensions: dict):
+    for folder in other_folders:
+        folder_name = folder.name
+        if folder_name not in extensions.keys():
+        # if folder_name == 'test':
+            # print(folder_name)
+            destination_folder = downloads_path / "Other_Folders" 
+            folder.rename(destination_folder/folder_name)
+            
+
 
 def main():
     create_folders(extensions)
     sort_files(files, extensions)
+    sort_folders(other_folders, extensions)
 
 
 if __name__ == "__main__":
     main()
+    # print(other_folders)
+    # create_folders(extensions)
+    # sort_folders(other_folders, extensions)
